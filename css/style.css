@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Scheherazade+New&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Scheherazade New', serif;
+  background-color: rgb(2, 2, 34);
+}
+
+section,
+footer {
+  padding: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(110, 108, 108);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(124, 123, 123);
+}
+
+.sidebars {
+  width: 4.5rem;
+  height: 100%;
+  position: fixed;
+  background: none;
+  background-color: rgb(2, 2, 34);
+  z-index: 1;
+}
+
+.bag-sidebars {
+  width: 85px;
+  height: 500px;
+  color: #111;
+  float: right;
+  transform: rotate(90deg);
+}
+
+.sidebars .icons {
+  margin-top: 40vh;
+}
+
+.sidebars-end {
+  width: 5.5rem;
+  height: 90vh;
+  float: right;
+  position: fixed;
+  margin-left: 96%;
+  background-color: rgb(2, 2, 34);
+  z-index: 1;
+}
+
+label.gmail-saya {
+  margin-top: 53vh;
+  font-size: 11px;
+  transform: rotate(90deg);
+  float: left;
+  font-size: 15px;
+}
+
+/* .bag-sidebars-end {
+  width: 85px;
+  height: 300px;
+  color: #111;
+  margin-top: 400px;
+  float: left;
+  transform: rotate(90deg);
+} */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  background-color: rgb(2, 2, 34);
+  z-index: 1;
+}
+
+#navbar ul li a {
+  color: #fff;
+  transition: ease 0.5s;
+  top: 0;
+}
+
+#navbar ul li p,
+#about .ke-satu p,
+#portfolio .ke-dua p {
+  color: rgb(255, 204, 102);
+  display: inline;
+}
+
+#navbar .navbar-brand:hover,
+#navbar ul li a:hover {
+  background: none !important;
+  /* color: rgba(207, 248, 24, 0.932); */
+  color: rgb(255, 204, 102);
+  transition: ease 0.5s;
+}
+
+#navbar .navbar-brand {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar .navbar-item {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* BAGIAN SLIDER */
+
+.konten {
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+
+.my-slide .carousel-item img {
+  max-width: 90%;
+  height: 50%;
+  margin: auto;
+}
+
+/* BAGIAN ABOUT */
+#about .container-fluid img {
+  filter: hue-rotate(480deg);
+  width: 300px;
+  height: 300px;
+}
+
+#about .container-fluid img:hover {
+  filter: none;
+}
+
+/* BAGIAN PERKENALAN */
+.say-hi a {
+  margin-bottom: 30vh;
+}
+
+.say-hi h1 {
+  text-shadow: 0 0 10px rgb(223, 233, 203);
+}
+
+/* BAGIAN PORTOFOLIO */
+#portfolio {
+  margin-top: 40vh;
+}
+
+/* BAGIAN LOADER */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  background-color: rgb(2, 2, 34);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid #3c3c3c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: yellowgreen;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px yellowgreen;
+  box-shadow: 0 0 20px rgba(196, 185, 185, 0.5);
+}
+.ring:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 103%;
+  height: 103%;
+  border: 3px solid transparent;
+  border-top: 3px solid yellowgreen;
+  border-right: 3px solid yellowgreen;
+  border-radius: 50%;
+  animation: animateCircle 2s linear infinite;
+}
+
+.loader-container.fade-out {
+  top: 110%;
+  opacity: 0;
+}
+
+@keyframes animateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(55deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
